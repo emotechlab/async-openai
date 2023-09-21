@@ -857,8 +857,11 @@ pub struct ChatChoice {
 
 #[derive(Debug, Deserialize, Clone, PartialEq, Serialize)]
 pub struct CreateChatCompletionResponse {
+    #[serde(default)]
     pub id: String,
+    #[serde(default)]
     pub object: String,
+    #[serde(default)]
     pub created: u32,
     pub model: String,
     pub usage: Option<Usage>,
